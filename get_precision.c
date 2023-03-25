@@ -39,3 +39,42 @@ int get_precision(const char *format, int *i, va_list list)
 
 	return (precision);
 }
+
+int get_precision(const char *format, ...)
+{
+	va_list args;
+	va_start(args, format);
+	
+	int written = 0;
+	while (*format != '\0') {
+		if (*format == '%') {
+		++format;
+		int precision = get_precision(format, (int*)&format, args);
+		if (*format == 'd') {
+			int value = va_arg(args, int);
+			written += printf("%.*d", precision, value);
+		} else if (*format == 'f') {
+			double value = va_arg(args, double);
+			written += printf("%.*f", precision, value);
+		} else if (*format == 's') {
+			char *value = va_arg(args, char*);
+			written += printf("%.*s", precision, value);
+			}
+		} else {
+			putchar(*format);
+			++written;
+		}
+	++format;
+}
+
+va_end(args);
+return written;
+}
+
+int main()
+{
+	my_printf("Printing an integer: %d\n", 123);
+	my_printf("Printing a float with precision: %.2f\n", 3.14159);
+	my_printf("Printing a string with precision: %.4s\n", "hello world");
+	return 0;
+}
