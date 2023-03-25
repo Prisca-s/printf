@@ -108,5 +108,5 @@ These are all the tasks of this project, the ones that are completed link to the
 ---
 
 ### Authors
-* **BECKY ISIJOLA** - [temmyisijola@gmail.com](https://github.com/Becky04)
-* **GODSWILL KALU** - [messagelordwill@gmail.com](https://github.com/Lordwill1)
+* **PRISCILLA OLANREWAJU** - [olaprisca41@gmail.com](https://github.com/prisca-s)
+* **VICTOR ORJI** - [orjivictor@gmail.com](https://github.com/theorjivictor)
