@@ -73,8 +73,8 @@ return written;
 
 int main()
 {
-	my_printf("Printing an integer: %d\n", 123);
-	my_printf("Printing a float with precision: %.2f\n", 3.14159);
-	my_printf("Printing a string with precision: %.4s\n", "hello world");
+	get_precision("Printing an integer: %d\n", 123);
+	get_precision("Printing a float with precision: %.2f\n", 3.14159);
+	get_precision("Printing a string with precision: %.4s\n", "hello world");
 	return 0;
 }
