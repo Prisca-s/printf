@@ -109,8 +109,10 @@ char buffer[],
 /****************** UTILS ******************/
 int is_printable(char);
 int append_hexa_code(char, char[], int);
-int is_digit(char);
-
+int is_digit(char)
+{
+	return c >= '0' && c <= '9';
+};
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
