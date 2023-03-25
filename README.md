@@ -109,4 +109,4 @@ These are all the tasks of this project, the ones that are completed link to the
 
 ### Authors
 * **PRISCILLA OLANREWAJU** - [olaprisca41@gmail.com](https://github.com/prisca-s)
-* **VICTOR ORJI** - [orjivictor@gmail.com](https://github.com/theorjivictor)
+* **VICTOR ORJIUGO** - [orjiugo.victor@gmail.com](https://github.com/theorjivictor)
