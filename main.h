@@ -30,6 +30,16 @@ struct fmt
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
+/**
+ * is_digit - Determines if a given character is a digit
+ * @c: The character to check
+ *
+ * Return: 1 if c is a digit, 0 otherwise
+ */
+int is_digit(char c)
+{
+	return (c >= '0' && c <= '9');
+}
 
 /**
  * typedef struct fmt fmt_t - Struct op
@@ -110,10 +120,6 @@ char buffer[],
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
-int is_digit(char c)
-{
-    return (c >= '0' && c <= '9');
-}
 
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
