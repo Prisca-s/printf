@@ -1,6 +1,3 @@
-#include <stdarg.h>
-#include "main.h"
-
 /**
 * get_precision - Calculates the precision for printing
 * @format: Formatted string in which to print the arguments
@@ -11,9 +8,6 @@
 */
 int get_precision(const char *format, int *i, va_list list)
 {
-	if (format == NULL)
-		return -1;
-	
 	int curr_i = *i + 1;
 	int precision = -1;
 
@@ -21,16 +15,23 @@ int get_precision(const char *format, int *i, va_list list)
 		return (precision);
 
 	precision = 0;
-	
-	while (is_digit(format{++curr_i}))
-		precision = precision * 10 + (format[curr_i] - '0');
-		
-	if (format[curr_i] == '*')
+
+	for (curr_i += 1; format[curr_i] != '\0'; curr_i++)
 	{
+		if (is_digit(format[curr_i]))
+		{
+			precision *= 10;
+			precision += format[curr_i] - '0';
+		}
+		else if (format[curr_i] == '*')
+		{
 			curr_i++;
 			precision = va_arg(list, int);
+			break;
+		}
+		else
+			break;
 	}
-	
 	*i = curr_i - 1;
 	return (precision);
 }
