@@ -31,17 +31,6 @@ struct fmt
 };
 
 /**
- * is_digit - Determines if a given character is a digit
- * @c: The character to check
- *
- * Return: 1 if c is a digit, 0 otherwise
- */
-int is_digit(char c)
-{
-	return (c >= '0' && c <= '9');
-}
-
-/**
  * typedef struct fmt fmt_t - Struct op
  *
  * @fmt: The format.
