@@ -28,13 +28,9 @@ int get_precision(const char *format, int *i, va_list list)
 		}
 		else if (format[curr_i] == '*')
 		{
-			width = va_arg(list, int);
-			if (curr_i < format_len - 1 && format[curr_i + 1] == '.')
-			{
 			curr_i++;
 			precision = va_arg(list, int);
 			break;
-			}
 		}
 		else
 			break;
